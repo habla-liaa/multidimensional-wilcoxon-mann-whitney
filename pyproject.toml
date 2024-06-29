@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multidimensional-wilcoxon-mann-whitney"
+version = "0.0.1"
+authors = [
+  { name="Pablo Riera", email="priera@dc.uba.ar" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multidimensional_wilcoxon_mann_whitney"]
+
+[project.urls]
+Homepage = "https://github.com/habla-liaa/multidimensional-wilcoxon-mann-whitney"
