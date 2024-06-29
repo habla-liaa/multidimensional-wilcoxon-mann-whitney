@@ -1,7 +1,7 @@
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
 
-def _multidimensional_rank_sum(d):
+def _multidimensional_ranksum(d, y):
     argsorts = np.argsort(d,axis=0)
     x = y[argsorts]
     m = x[0]==x[1:]
@@ -14,8 +14,8 @@ def _multidimensional_rank_sum(d):
     U = np.where(U1>U2, U1, U2)/n1/n2
     return argsorts, U
 
-def multidimensional_rank_sum(X, distance = "euclidean"):
+def multidimensional_ranksum(X, y, distance = "euclidean"):
     d = pdist(X, metric=distance)
     d = squareform(d)
-    argsorts, U = _multidimensional_rank_sum(d)
+    argsorts, U = _multidimensional_ranksum(d, y)
     return argsorts, U

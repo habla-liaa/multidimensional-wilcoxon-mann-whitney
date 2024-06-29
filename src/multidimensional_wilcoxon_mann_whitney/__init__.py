@@ -1,1 +1,2 @@
-from .multidimensional_ranksum import multidimensional_rank_sum
+from .multidimensional_ranksum import multidimensional_ranksum
+__all__ = ['multidimensional_ranksum']
