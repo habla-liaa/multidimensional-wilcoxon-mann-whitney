@@ -1,0 +1,1 @@
+from .multidimensional_ranksum import multidimensional_rank_sum

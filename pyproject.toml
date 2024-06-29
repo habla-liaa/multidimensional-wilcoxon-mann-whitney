@@ -8,7 +8,7 @@ version = "0.0.1"
 authors = [
   { name="Pablo Riera", email="priera@dc.uba.ar" },
 ]
-description = "A small example package"
+description = "Multidimensional Wilcoxon-Mann-Whitney U statistic"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
