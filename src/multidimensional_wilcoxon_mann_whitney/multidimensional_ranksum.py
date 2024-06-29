@@ -12,10 +12,12 @@ def _multidimensional_ranksum(d, y):
     U1 = np.where(m, ix, np.zeros_like(ix)).sum(0) - n1*(n1+1)/2
     U2 = np.where(~m, ix, np.zeros_like(ix)).sum(0) - n2*(n2+1)/2
     U = np.where(U1>U2, U1, U2)/n1/n2
-    return argsorts, U
+    return U, argsorts
 
-def multidimensional_ranksum(X, y, distance = "euclidean"):
+def multidimensional_ranksum(X, y, distance = "euclidean", return_argsorts=False):
     d = pdist(X, metric=distance)
     d = squareform(d)
-    argsorts, U = _multidimensional_ranksum(d, y)
-    return argsorts, U
+    U, argsorts = _multidimensional_ranksum(d, y)
+    if return_argsorts:
+        return U, argsorts
+    return U
