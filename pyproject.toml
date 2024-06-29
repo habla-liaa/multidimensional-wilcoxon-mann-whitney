@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "multidimensional-wilcoxon-mann-whitney"
-version = "0.0.1-5"
+version = "0.0.1-6"
 authors = [
   { name="Pablo Riera", email="priera@dc.uba.ar" },
 ]
